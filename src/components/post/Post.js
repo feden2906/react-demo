@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 
-
-export default function Post (props) {
+export default function Post () {
 
     let [postList,setPostList] = useState([])
 
@@ -14,29 +13,20 @@ export default function Post (props) {
             })
     },[])
 
-    let {item:{userId,id,title,body}} = props
-
-
     return (
         <div>
             {
             postList.map(value =>
                 <div>
-                    {userId}<br/>
-                    {id}<br/>
-                    {title}<br/>
-                    {body}<dl/>
+                    User Id: {value.userId}<br/>
+                    Post number: {value.id}<br/>
+                    {value.title}<br/>
+                    {value.body}<dl/>
                 </div>
             )
-
-
-
         }
         </div>
-
-
     )
-
 }
 
 
