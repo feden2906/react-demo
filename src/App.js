@@ -1,6 +1,7 @@
 
 import './App.css';
 import Post from "./components/post/Post";
+import Users from "./components/users/Users";
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <div>
       {
-        <Post/>
+        <Users/>
       }
     </div>
   );
