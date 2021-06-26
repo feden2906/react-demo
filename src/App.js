@@ -1,18 +1,20 @@
 
 import './App.css';
-import Post from "./components/post/Post";
-import Users from "./components/users/Users";
+
+import Posts from "./components/homework/post/Posts";
+
 
 function App() {
 
 
-  return (
-    <div>
-      {
-        <Users/>
-      }
-    </div>
-  );
+
+    return (
+        <div>
+            {
+                <Posts/>
+            }
+        </div>
+    );
 }
 
 export default App;
