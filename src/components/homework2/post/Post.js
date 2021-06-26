@@ -1,7 +1,5 @@
-import PostDetail from "../postDetails/PostDetail";
-import {getPost} from "../services/API";
-import {getPostsId} from "../../homework2/services/API";
-import Posts from "./Posts";
+
+import {getPostsId} from "../services/API";
 import {useState} from "react";
 
 export default function Post (props) {
@@ -13,19 +11,18 @@ export default function Post (props) {
     return(
 
         <div>
-            {/*{item.id}<br/>*/}
+            {item.id}<br/>
             Title: {item.title}<br/>
-            {/*{item.body}<br/>*/}
+            {item.body}<br/>
             <button onClick={() => {
 
+
                 selectPost(item.id);
-getPostsId(item.id).then(value => setPost(value.data))
+                getPostsId(item.id).then(value => setPost(value.data))
 
 
             }}>Expand</button><dl/>
-            {
-                // <Posts items={post} />
-            }
+
         </div>
 
     )

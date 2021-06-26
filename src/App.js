@@ -20,14 +20,15 @@ export default  function App() {
 
   function selectPost (id) {
     getPost(id).then(({data}) => {
-      console.log(data)
+      // console.log(data.body)
       setPostDetails(data)})
 
   }
 
   return (
     <div>
-      <Posts items={posts} selectPost={selectPost}/>
+      <Posts items={posts} selectPost={selectPost} />
+
       <hr/>
 
       {
