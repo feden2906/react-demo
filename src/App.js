@@ -1,7 +1,4 @@
-
-import './App.css';
-
-import Posts from "./components/homework/post/Posts";
+import Users from "./components/classwork/users/Users";
 
 
 function App() {
@@ -10,9 +7,7 @@ function App() {
 
     return (
         <div>
-            {
-                <Posts/>
-            }
+            <Users/>
         </div>
     );
 }

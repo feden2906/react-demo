@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
-import Post from "../post/Post";
+
 import User from "./User";
+
+
 
 export default function Users () {
 
@@ -20,7 +22,9 @@ export default function Users () {
         <div>
             {
                 userList.map(value => <User item={value}/>)
+
             }
+
         </div>
     )
 }
