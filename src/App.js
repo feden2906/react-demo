@@ -5,8 +5,6 @@ import {getPosts, getPost} from "./components/homework2/services/API";
 import Posts from "./components/homework2/post/Posts";
 import PostDetail from "./components/homework2/postDetails/PostDetail";
 
-
-
 export default  function App() {
 
   let [posts,setPosts] = useState([])
@@ -20,17 +18,13 @@ export default  function App() {
 
   function selectPost (id) {
     getPost(id).then(({data}) => {
-      // console.log(data.body)
       setPostDetails(data)})
-
   }
 
   return (
     <div>
       <Posts items={posts} selectPost={selectPost} />
-
       <hr/>
-
       {
         postDetails && <PostDetail item={postDetails}/>
       }
