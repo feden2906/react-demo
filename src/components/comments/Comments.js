@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../services/API";
+import {getComments} from "../services/API";
 import Comment from "./Comment";
 
 export default function Comments () {
@@ -7,7 +7,7 @@ export default function Comments () {
     let [comments,setComments] = useState([])
 
     useEffect(() => {
-        getUsers().then(response =>
+        getComments().then(response =>
             setComments(response.data))
     })
 

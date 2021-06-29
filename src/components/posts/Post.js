@@ -5,6 +5,7 @@ export default function Post ({item}) {
             <div>{item.id}</div>
             <div>{item.title}</div>
             <div>{item.body}</div>
+            <dl/>
         </div>
     )
 }
