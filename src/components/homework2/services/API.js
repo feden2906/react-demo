@@ -7,7 +7,7 @@ let axiosInstance = axios.create({
 const getPosts = () => axiosInstance.get('posts/')
 const getPost = (id) => axiosInstance.get('posts/' + id)
 
-export {getPosts, getPost,}
+export {getPosts, getPost}
 
 
 
