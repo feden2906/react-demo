@@ -13,7 +13,6 @@ function App() {
             <div><Link to='/posts'>Posts</Link></div>
             <div><Link to='/comments'>Comments</Link></div>
 
-
                 <Route path={'/'} exact render={() => {
                 return <div>Home</div>
                 }}/>
@@ -26,8 +25,6 @@ function App() {
                 <Route path={'/comments'} render={(props) => {
                     return <Comments/>
                 }}/>
-
-
         </div>
       </Router>
   );
