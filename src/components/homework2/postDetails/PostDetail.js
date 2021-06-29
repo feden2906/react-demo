@@ -1,7 +1,16 @@
-export default function PostDetail ({item}) {
+export default function PostDetail ({post1}) {
+
+
+
+
+
     return(
         <div>
-            {item.body}
+            {
+
+
+                post1.map(value => <div>{value.body}</div>)
+            }
         </div>
     )
 }

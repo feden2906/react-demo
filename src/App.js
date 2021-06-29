@@ -1,9 +1,9 @@
 // // POSTS
 
 import {useEffect, useState} from "react";
-import {getPosts, getPost} from "./components/homework2/services/API";
+import {getPosts,getPost} from "./components/homework2/services/API";
 import Posts from "./components/homework2/post/Posts";
-import PostDetail from "./components/homework2/postDetails/PostDetail";
+// import PostDetail from "./components/homework2/postDetails/PostDetail";
 
 export default  function App() {
 
@@ -12,22 +12,21 @@ export default  function App() {
 
   useEffect(() => {
     getPosts().then(response => {
-      setPosts(response.data)
+      setPosts([...response.data])
     })
   },[])
 
-  function selectPost (id) {
-    getPost(id).then(({data}) => {
-      setPostDetails(data)})
-  }
+  // function selectPost (id) {
+  //   getPost(id).then(({data}) => {
+  //     setPostDetails(data)})
+  // }
 
   return (
     <div>
-      <Posts items={posts} selectPost={selectPost} />
+
+      <Posts posts={posts} />
       <hr/>
-      {
-        postDetails && <PostDetail item={postDetails}/>
-      }
+
     </div>
   );
 }

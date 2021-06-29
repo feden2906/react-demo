@@ -1,21 +1,30 @@
 
 import {getPosts} from "../services/API";
 import {useState} from "react";
+import PostDetail from "../postDetails/PostDetail";
 
-export default function Post (props) {
-    let {item, selectPost} = props
+export default function Post ({item}) {
 
-    let [post, setPost] = useState(null)
+
+    let [post, setPost] = useState([])
 
     return(
         <div>
-            {item.id}<br/>
-            Title: {item.title}<br/>
-            {item.body}<br/>
+            {item.id}--- Title: {item.title}<br/>
+
+
+
             <button onClick={() => {
-                selectPost(item.id);
-                getPosts(item.id).then(value => setPost(value.data))
-            }}>Expand</button><dl/>
+
+                getPosts(item.id).then(value => setPost([...value.data]) )
+            }}>Expand</button>
+            <dl/>
+            {/*setPost([...value.data])*/}
+
+            <PostDetail post1={post}/>
+
+
+
         </div>
     )
 }

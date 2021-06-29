@@ -1,12 +1,12 @@
 import Post from "./Post";
 
-export default function Posts (props) {
-    let {items, selectPost} = props
+export default function Posts ({posts}) {
+
 
     return(
         <div>
             {
-                items.map(post => <Post key={post.id} item={post} selectPost={selectPost}/>)
+                posts.map(post => <Post key={post.id} item={post} />)
             }
         </div>
     )
