@@ -15,15 +15,21 @@ const CreateTodoForm = () => {
 
 const Todos = () => {
 
-}
-
-const fetchTodos = async () => {
+  const fetchTodos = async () => {
     const resp = await fetch('http://localhost:9999/get-todos')
     const data = await resp.json()
+  }
+
+  useEffect(() => {
+    fetchTodos()
+  },[])
+  return (
+      <div>
+
+      </div>
+  )
 }
 
-useEffect(() => {
-    fetchTodos()},[])
 
 function App() {
     const store = useSelector(store => store)
@@ -32,6 +38,7 @@ function App() {
     return (
         <div>
             <CreateTodoForm/>
+            <Todos/>
         </div>
     );
 }
